@@ -1,0 +1,256 @@
+--- Session 1: Registration (unique usernames), failed and successful login ---
+> python task_manager.py
+
+===== Welcome =====
+1. Register
+2. Login
+3. Exit
+Choose an option (1-3): 1
+Choose a username: alice
+Choose a password (min 4 characters): *****
+Confirm password: *****
+User 'alice' registered successfully. You can now log in.
+
+===== Welcome =====
+1. Register
+2. Login
+3. Exit
+Choose an option (1-3): 1
+Choose a username: ALICE
+That username is already taken. Please choose another.
+
+===== Welcome =====
+1. Register
+2. Login
+3. Exit
+Choose an option (1-3): 2
+Username: alice
+Password: *****
+Invalid username or password.
+
+===== Welcome =====
+1. Register
+2. Login
+3. Exit
+Choose an option (1-3): 2
+Username: alice
+Password: *****
+Welcome, alice!
+
+===== Task Manager (alice) =====
+1. Add a Task
+2. View Tasks
+3. Mark a Task as Completed
+4. Delete a Task
+5. Logout
+Choose an option (1-5): 5
+Logged out. Goodbye, alice!
+
+===== Welcome =====
+1. Register
+2. Login
+3. Exit
+Choose an option (1-3): 3
+Goodbye!
+
+--- Session 2: Add, view, mark as completed and delete tasks ---
+> python task_manager.py
+
+===== Welcome =====
+1. Register
+2. Login
+3. Exit
+Choose an option (1-3): 2
+Username: alice
+Password: *****
+Welcome, alice!
+
+===== Task Manager (alice) =====
+1. Add a Task
+2. View Tasks
+3. Mark a Task as Completed
+4. Delete a Task
+5. Logout
+Choose an option (1-5): 1
+Task description: Buy groceries
+Task 1 added.
+
+===== Task Manager (alice) =====
+1. Add a Task
+2. View Tasks
+3. Mark a Task as Completed
+4. Delete a Task
+5. Logout
+Choose an option (1-5): 1
+Task description: Finish course project
+Task 2 added.
+
+===== Task Manager (alice) =====
+1. Add a Task
+2. View Tasks
+3. Mark a Task as Completed
+4. Delete a Task
+5. Logout
+Choose an option (1-5): 2
+
+ ID  Status      Description
+--------------------------------------------------
+  1  Pending     Buy groceries
+  2  Pending     Finish course project
+
+===== Task Manager (alice) =====
+1. Add a Task
+2. View Tasks
+3. Mark a Task as Completed
+4. Delete a Task
+5. Logout
+Choose an option (1-5): 3
+Enter task ID: 1
+Task 1 marked as Completed.
+
+===== Task Manager (alice) =====
+1. Add a Task
+2. View Tasks
+3. Mark a Task as Completed
+4. Delete a Task
+5. Logout
+Choose an option (1-5): 3
+Enter task ID: 99
+No task with ID 99.
+
+===== Task Manager (alice) =====
+1. Add a Task
+2. View Tasks
+3. Mark a Task as Completed
+4. Delete a Task
+5. Logout
+Choose an option (1-5): 4
+Enter task ID: 2
+Task 2 deleted.
+
+===== Task Manager (alice) =====
+1. Add a Task
+2. View Tasks
+3. Mark a Task as Completed
+4. Delete a Task
+5. Logout
+Choose an option (1-5): 2
+
+ ID  Status      Description
+--------------------------------------------------
+  1  Completed   Buy groceries
+
+===== Task Manager (alice) =====
+1. Add a Task
+2. View Tasks
+3. Mark a Task as Completed
+4. Delete a Task
+5. Logout
+Choose an option (1-5): 5
+Logged out. Goodbye, alice!
+
+===== Welcome =====
+1. Register
+2. Login
+3. Exit
+Choose an option (1-3): 3
+Goodbye!
+
+--- Session 3: A second user only sees their own tasks; data persists between runs ---
+> python task_manager.py
+
+===== Welcome =====
+1. Register
+2. Login
+3. Exit
+Choose an option (1-3): 1
+Choose a username: bob
+Choose a password (min 4 characters): *****
+Confirm password: *****
+User 'bob' registered successfully. You can now log in.
+
+===== Welcome =====
+1. Register
+2. Login
+3. Exit
+Choose an option (1-3): 2
+Username: bob
+Password: *****
+Welcome, bob!
+
+===== Task Manager (bob) =====
+1. Add a Task
+2. View Tasks
+3. Mark a Task as Completed
+4. Delete a Task
+5. Logout
+Choose an option (1-5): 2
+You have no tasks.
+
+===== Task Manager (bob) =====
+1. Add a Task
+2. View Tasks
+3. Mark a Task as Completed
+4. Delete a Task
+5. Logout
+Choose an option (1-5): 1
+Task description: Bob's task
+Task 1 added.
+
+===== Task Manager (bob) =====
+1. Add a Task
+2. View Tasks
+3. Mark a Task as Completed
+4. Delete a Task
+5. Logout
+Choose an option (1-5): 2
+
+ ID  Status      Description
+--------------------------------------------------
+  1  Pending     Bob's task
+
+===== Task Manager (bob) =====
+1. Add a Task
+2. View Tasks
+3. Mark a Task as Completed
+4. Delete a Task
+5. Logout
+Choose an option (1-5): 5
+Logged out. Goodbye, bob!
+
+===== Welcome =====
+1. Register
+2. Login
+3. Exit
+Choose an option (1-3): 2
+Username: alice
+Password: *****
+Welcome, alice!
+
+===== Task Manager (alice) =====
+1. Add a Task
+2. View Tasks
+3. Mark a Task as Completed
+4. Delete a Task
+5. Logout
+Choose an option (1-5): 2
+
+ ID  Status      Description
+--------------------------------------------------
+  1  Completed   Buy groceries
+
+===== Task Manager (alice) =====
+1. Add a Task
+2. View Tasks
+3. Mark a Task as Completed
+4. Delete a Task
+5. Logout
+Choose an option (1-5): 5
+Logged out. Goodbye, alice!
+
+===== Welcome =====
+1. Register
+2. Login
+3. Exit
+Choose an option (1-3): 3
+Goodbye!

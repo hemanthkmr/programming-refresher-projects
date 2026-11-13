@@ -1,0 +1,137 @@
+--- Session 1: Adding expenses, input validation, budget tracking and saving ---
+> python expense_tracker.py
+
+===== Personal Expense Tracker =====
+1. Add expense
+2. View expenses
+3. Track budget
+4. Save expenses
+5. Exit
+Choose an option (1-5): 1
+Date (YYYY-MM-DD): 2024-13-01
+Invalid date. Please use the format YYYY-MM-DD, e.g. 2024-09-18.
+Date (YYYY-MM-DD): 2024-09-18
+Category (e.g. Food, Travel): food
+Amount spent: 15.5
+Short description: Lunch with friends
+Added: {'date': '2024-09-18', 'category': 'Food', 'amount': 15.5, 'description': 'Lunch with friends'}
+
+===== Personal Expense Tracker =====
+1. Add expense
+2. View expenses
+3. Track budget
+4. Save expenses
+5. Exit
+Choose an option (1-5): 1
+Date (YYYY-MM-DD): 2024-09-19
+Category (e.g. Food, Travel): Travel
+Amount spent: abc
+Please enter a number, e.g. 15.50.
+Amount spent: 40
+Short description: Cab to office
+Added: {'date': '2024-09-19', 'category': 'Travel', 'amount': 40.0, 'description': 'Cab to office'}
+
+===== Personal Expense Tracker =====
+1. Add expense
+2. View expenses
+3. Track budget
+4. Save expenses
+5. Exit
+Choose an option (1-5): 3
+No monthly budget set yet.
+Enter your total budget for the month: 500
+Monthly budget set to 500.00
+Total spent so far: 55.50 | Monthly budget: 500.00
+You have 444.50 left for the month
+
+===== Personal Expense Tracker =====
+1. Add expense
+2. View expenses
+3. Track budget
+4. Save expenses
+5. Exit
+Choose an option (1-5): 2
+
+  #  Date        Category          Amount  Description
+-----------------------------------------------------------------
+  1  2024-09-18  Food               15.50  Lunch with friends
+  2  2024-09-19  Travel             40.00  Cab to office
+-----------------------------------------------------------------
+2 valid expense(s) shown.
+Spending by category:
+  Food              15.50
+  Travel            40.00
+
+===== Personal Expense Tracker =====
+1. Add expense
+2. View expenses
+3. Track budget
+4. Save expenses
+5. Exit
+Choose an option (1-5): 9
+Invalid choice. Please enter a number from 1 to 5.
+
+===== Personal Expense Tracker =====
+1. Add expense
+2. View expenses
+3. Track budget
+4. Save expenses
+5. Exit
+Choose an option (1-5): 5
+Saved 2 expense(s) to expenses.csv
+Goodbye!
+
+--- Session 2: Restart: saved expenses are loaded from expenses.csv; budget exceeded ---
+> python expense_tracker.py
+Loaded 2 expense(s) from expenses.csv
+
+===== Personal Expense Tracker =====
+1. Add expense
+2. View expenses
+3. Track budget
+4. Save expenses
+5. Exit
+Choose an option (1-5): 2
+
+  #  Date        Category          Amount  Description
+-----------------------------------------------------------------
+  1  2024-09-18  Food               15.50  Lunch with friends
+  2  2024-09-19  Travel             40.00  Cab to office
+-----------------------------------------------------------------
+2 valid expense(s) shown.
+Spending by category:
+  Food              15.50
+  Travel            40.00
+
+===== Personal Expense Tracker =====
+1. Add expense
+2. View expenses
+3. Track budget
+4. Save expenses
+5. Exit
+Choose an option (1-5): 1
+Date (YYYY-MM-DD): 2024-09-20
+Category (e.g. Food, Travel): Shopping
+Amount spent: 520
+Short description: Laptop bag
+Added: {'date': '2024-09-20', 'category': 'Shopping', 'amount': 520.0, 'description': 'Laptop bag'}
+
+===== Personal Expense Tracker =====
+1. Add expense
+2. View expenses
+3. Track budget
+4. Save expenses
+5. Exit
+Choose an option (1-5): 3
+Total spent so far: 575.50 | Monthly budget: 500.00
+You have exceeded your budget! (over by 75.50)
+
+===== Personal Expense Tracker =====
+1. Add expense
+2. View expenses
+3. Track budget
+4. Save expenses
+5. Exit
+Choose an option (1-5): 5
+Saved 3 expense(s) to expenses.csv
+Goodbye!
